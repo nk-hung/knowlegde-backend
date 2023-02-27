@@ -1,0 +1,11 @@
+{
+  "name": "knowlegde-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nk-hung/knowlegde-backend.git",
+  "author": "hungnk <nguyenkyhunght@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.0"
+  }
+}
