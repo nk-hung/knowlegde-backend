@@ -5,25 +5,26 @@
 //   })
 //   .listen(8080);
 
-// setTimeout(() => {
-//   console.log('timeout');
-// }, 0);
+setTimeout(() => {
+  console.log('timeout');
+}, 0);
 
-// setImmediate(() => {
-//   console.log('immediate');
-// });
+setImmediate(() => {
+  console.log('immediate');
+});
 
-// new Promise((reslove, reject) => {
-//   reslove();
-//   console.log('resolve');
-// }).then(() => {
-//   console.log('promise');
-// });
-// console.log('T1');
+new Promise((reslove, reject) => {
+  reslove();
+  console.log('resolve');
+}).then(() => {
+  console.log('promise');
+});
+console.log('T1');
 
-// process.nextTick((_) => {
-//   console.log('next tick');
-// });
+process.nextTick((_) => {
+  console.log('next tick');
+});
+let count = 0;
 
 // server.on('connection', (conn) => {
 //   console.log(connection);
@@ -34,11 +35,11 @@
 // });
 
 // This case not within an I/O cycle => the order in which the two timers are executed is non-deterministic.
-setImmediate(() => {
-  console.log('immediate');
-});
-setTimeout(() => {
-  console.log('timeout');
-}, 0);
+// setImmediate(() => {
+//   console.log('immediate');
+// });
+// setTimeout(() => {
+//   console.log('timeout');
+// }, 0);
 
 // Case within an I/O cycle => setImmediate allways run first.
